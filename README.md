@@ -17,14 +17,14 @@ public function backendContactInfo($params)
     );
 }
 ```
-Плагин нужно поместить в папку _/wa-apps/contacts/plugins/_  
+Код репозитория нужно поместить в папку _/wa-apps/contacts/plugins/confirm_  
 Не забудьте создать файл **_plugins.php_** в папке _/wa-config/apps/contacts/_ и добавить в него
 
 ```php
 <?php
 
 return array (
-  'confirmcontact' => true,
+  'confirm' => true,
 );
 //EOF
 ```

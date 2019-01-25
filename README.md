@@ -1,6 +1,6 @@
 Данный репозиторий - попытка написать плагин для приложения "Контакты".  
 Плагин использует хук **_backend_contact_info_**.  
-Документация по хуку лежит здесь [здесь](https://developers.webasyst.com/hooks/contacts/backend_contact_info/).  
+Документация по хуку лежит [здесь](https://developers.webasyst.com/hooks/contacts/backend_contact_info/).  
 Ниже тестовый код обработчика хука, я его использовал в плагине.
 
 ```php

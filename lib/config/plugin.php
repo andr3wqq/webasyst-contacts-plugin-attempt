@@ -6,6 +6,7 @@ return array(
 'version' => '1.0',
 'handlers' => array(
     'backend_contact_info' => 'backendContactInfo',
+    'backend_assets' => 'backendAssets',
 ),
 
 'img'=>'img/plugin.png',

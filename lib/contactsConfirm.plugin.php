@@ -6,14 +6,10 @@ class contactsConfirmPlugin extends waPlugin // не уверен насчёт c
     {
         $contact_id = $params['contact_id']; // пока не нужно
 
-        $after_header_html = '
-        <a href="javascript:void(0);" class="contact-confirmation" id="contact_confirmation">
-            Отправить ссылку на подтвержение регистрации
-        </a>
-        ';
+        $html = '<a href="#" id="plugin_'.$this->id.'">Отправить ссылку на подтвержение регистрации</a>';
 
         return array(
-            'after_header'  => $after_header_html,
+            'after_header'  => $html,
             'header'        => 'next to contact name',
             'before_header' => 'above contact name',
             'before_top'    => 'above main contact fields',
@@ -24,7 +20,7 @@ class contactsConfirmPlugin extends waPlugin // не уверен насчёт c
 
     public function backendAssets()
     {
-        $this->addCss('css/confirm.css');
-        $this->addJs('js/confirm.js');
+        $url = $this->getPluginStaticUrl(true);
+        return '<link rel="stylesheet" href="'.$url.'css/confirm.css"><script src="'.$url.'js/confirm.js"></script>';
     }
 }

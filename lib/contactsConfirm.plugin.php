@@ -1,12 +1,12 @@
 <?php
 
-class contactsConfirmPlugin extends waPlugin // не уверен насчёт contactsPlugin
+class contactsConfirmPlugin extends waPlugin
 {
     public function backendContactInfo($params)
     {
         $contact_id = $params['contact_id']; // пока не нужно
 
-        $html = '<a href="#" id="plugin_'.$this->id.'">Отправить ссылку на подтвержение регистрации</a>';
+        $html = '<a href="#" id="plugin_'.$this->id.'" class="plugin-'.$this->id.'">Подтвердить заявку на регистрацию</a>';
 
         return array(
             'after_header'  => $html,
